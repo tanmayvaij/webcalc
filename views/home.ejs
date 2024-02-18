@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      * {
+        transition: 0.2s linear;
+      }
+      #card {
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="flex items-center flex-col space-y-20 justify-center min-h-screen bg-no-repeat bg-cover bg-[url('https://images.pexels.com/photos/618833/pexels-photo-618833.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]"
+    >
+      <div
+        class="bg-white h-20 w-40 rounded-md flex items-center justify-center font-bold text-xl"
+      >
+      <% if (sum) { %>
+        <%= sum %>
+      <% } %>
+      </div>
+
+      <form
+        id="card"
+        class="drop-shadow-lg backdrop-blur-md p-10 rounded-xl flex flex-col space-y-5"
+        method="post"
+      >
+        <input
+          class="rounded-lg border-b border-b-gray-400 outline-none focus:border-b-blue-600 p-3"
+          type="number"
+          name="num1"
+          id=""
+          placeholder="First Number"
+        />
+        <input
+          class="rounded-lg border-b border-b-gray-400 outline-none focus:border-b-blue-600 p-3"
+          type="number"
+          name="num2"
+          id=""
+          placeholder="Second Number"
+        />
+        <button
+          type="submit"
+          class="bg-blue-700 hover:bg-blue-900 font-bold py-2 rounded-lg text-white"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
